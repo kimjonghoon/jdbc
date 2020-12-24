@@ -30,14 +30,14 @@ public class BankConfig {
 	
     @Bean
     public BankDao shinhanBankDao() {
-        ShinhanBankDao bankDao = new ShinhanBankDao();
+        MyBankDao bankDao = new MyBankDao();
         bankDao.setDataSource(dataSource());
         return bankDao;
     }
 
 	@Bean
 	public Bank shinhanBank() {
-		Bank bank = new ShinhanBank();
+		Bank bank = new MyBank();
 		bank.setDao(shinhanBankDao());
 		return bank;
 	}

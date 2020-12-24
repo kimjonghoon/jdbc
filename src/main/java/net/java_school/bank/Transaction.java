@@ -1,25 +1,19 @@
 package net.java_school.bank;
 
-import java.io.Serializable;
-
-public class Transaction implements Serializable {
-
-	private static final long serialVersionUID = 4845616677229242217L;
-
+public class Transaction {
 	private String transactionDate;
 	private String transactionTime;
 	private String kind;
-	private long amount;
-	private long balance;
+	private double amount;
+	private double balance;
 
 	public Transaction() {}
 
 	public Transaction(String transactionDate,
 			String transactionTime,
 			String kind,
-			long amount,
-			long balance) {
-
+			double amount,
+			double balance) {
 		this.transactionDate = transactionDate;
 		this.transactionTime = transactionTime;        
 		this.kind = kind;
@@ -45,16 +39,16 @@ public class Transaction implements Serializable {
 	public void setKind(String kind) {
 		this.kind = kind;
 	}
-	public long getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(long amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public long getBalance() {
+	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(long balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 
